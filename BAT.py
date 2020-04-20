@@ -60,8 +60,10 @@ def BAT(objf,lb,ub,dim,N,Max_iteration):
     
     
     # Find the initial best solution
-    I=numpy.argmin(Fitness)
-           
+    i=numpy.argmin(Fitness)
+    best = numpy.copy(Sol[i,:])
+    fmin = Fitness[i]
+    
     # Main loop
     for t in range (0,N_gen): 
         
